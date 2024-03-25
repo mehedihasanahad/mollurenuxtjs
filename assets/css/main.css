@@ -1,3 +1,67 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@font-face {
+    font-family: customfont;
+    src: url('../font/Playfair_Display/static/PlayfairDisplay-Regular.ttf');
+}
+
+@font-face {
+    font-family: customfontSemibold;
+    src: url('../font/Playfair_Display/static/PlayfairDisplay-SemiBold.ttf');
+}
+
+* {
+    font-family: customfont;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.004);
+    text-rendering: optimizeLegibility !important;
+    -webkit-font-smoothing: antialiased !important;
+}
+
+.base-gradient {
+    outline-color: linear-gradient(to right, #21B8BF , #66C68F);
+}
+
+.bg-mix-blue {
+    --tw-bg-opacity: 1;
+    background-color: rgb(33 184 191 / var(--tw-bg-opacity));
+}
+
+/*custom scrollbar css*/
+/* width */
+.custom-scrollbar::-webkit-scrollbar {
+    width: 5px;
+}
+/* Track */
+.custom-scrollbar::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+.custom-scrollbar::-webkit-scrollbar-thumb {
+    background: #d4d1d1;
+}
+/* Handle on hover */
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #abaaaa;
+}
+/*custom scrollbar css*/
+
+
+input[type=checkbox]:checked:before {
+    background-image: url('/public/Icons/first Icons copy/Interface/Check-green.svg');
+    background-position: 50%;
+    background-repeat: no-repeat;
+    background-size: contain;
+    content: "";
+    display: block;
+    height: 11px;
+    margin-left: 2px;
+    margin-top: 1.5px;
+    width: 10px;
+}
+
+input[type=checkbox]:checked {
+    background-color: #fff;
+    border: 1.5px solid #66c68f;
+}
