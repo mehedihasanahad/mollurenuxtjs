@@ -83,10 +83,11 @@ const provinces = ref(null);
 const provincesDropdown = ref(false);
 const province = ref('Select Province');
 
-async function getProvince() {
-  const { data } = await $fetch('https://admin.mollure.nl/api/provinces');
-  provinces.value = data;
-}
+// get provinces data server side
+(async function getProvince() {
+  const provincesData = await useFetch('https://admin.mollure.nl/api/provinces');
+  provinces.value = provincesData.data.value.data;
+})();
 
 function setProvince(selectedProvince) {
   province.value = selectedProvince.name;
@@ -116,9 +117,4 @@ function closeDropDown(event) {
     municipalityDropdown.value = false;
   }
 }
-
-// on mount
-onMounted(() => {
-  getProvince();
-});
 </script>
