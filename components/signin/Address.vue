@@ -6,19 +6,19 @@
     </label>
     <div class="grid grid-cols-1 gap-2 md:grid-cols-2 ">
       <div class="w-full ">
-        <input type="text" name="street" placeholder="Enter Street" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md  outline-none focus:border-customGreen" value="">
+        <input type="text" name="street" placeholder="Enter Street" class="custom-input" value="">
       </div>
       <div class="w-full ">
-        <input type="text" name="number" placeholder="Enter Number" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md  outline-none focus:border-customGreen" value="">
+        <input type="text" name="number" placeholder="Enter Number" class="custom-input" value="">
       </div>
       <div class="w-full ">
-        <input type="text" name="postalCode" placeholder="Enter Postal Code" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md  outline-none focus:border-customGreen" value="">
+        <input type="text" name="postalCode" placeholder="Enter Postal Code" class="custom-input" value="">
       </div>
 
       <div class="w-full">
         <div class="relative mt-1">
           <span class="inline-block w-full rounded-md shadow-sm" @click="provincesDropdown = !provincesDropdown">
-            <button class="relative w-full py-3 pl-3 pr-8 mt-1 text-base font-normal text-left transition duration-150 ease-in-out border border-gray-300 rounded-md focus:outline-none focus:border-customGreen" type="button">
+            <button class="relative w-full py-3 pl-3 pr-8 mt-1 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
               <span class="text-gray-400 block truncate">{{province}}</span>
               <span class="absolute inset-y-0 flex items-center pr-2 ml-3 pointer-events-none right-1">
                 <img src="public/Icons/Icons_second part copy/SVGs/Arrow/Chevron_Down.svg" alt="arrow">
@@ -47,7 +47,7 @@
       <div class="w-full">
         <div class="relative mt-1">
           <span class="inline-block w-full rounded-md shadow-sm" @click="municipalityDropdown = !municipalityDropdown">
-            <button class="relative w-full py-3 pl-3 pr-8 mt-1 text-base font-normal text-left transition duration-150 ease-in-out border border-gray-300 rounded-md focus:outline-none focus:border-customGreen" type="button">
+            <button class="relative w-full py-3 pl-3 pr-8 mt-1 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
               <span class="text-gray-400 block truncate">{{municipality}}</span>
               <span class="absolute inset-y-0 flex items-center pr-2 ml-3 pointer-events-none right-1">
                 <img src="public/Icons/Icons_second part copy/SVGs/Arrow/Chevron_Down.svg" alt="arrow">

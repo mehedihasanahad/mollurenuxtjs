@@ -16,21 +16,21 @@
               <span> Legal Name <span class="text-red-500">*</span> </span>
               <InfoTooltip text="Enter your full name."/>
             </label>
-            <input type="text" id="legalName" name="legalName" placeholder="Enter Legal Name" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md  outline-none focus:border-customGreen" value="">
+            <input type="text" id="legalName" name="legalName" placeholder="Enter Legal Name" class="custom-input" value="">
           </div>
 
           <div>
             <label for="cocNumber" class="flex items-center gap-1 text-sm font-normal text-gray-500">
               <span> COC Number <span class="text-red-500">*</span> </span>
             </label>
-            <input type="text" id="cocNumber" name="legalName" placeholder="Enter COC Number" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md  outline-none focus:border-customGreen" value="">
+            <input type="text" id="cocNumber" name="legalName" placeholder="Enter COC Number" class="custom-input" value="">
           </div>
 
           <div>
             <label for="vatNumber" class="flex items-center gap-1 text-sm font-normal text-gray-500">
               <span> VAT Number <span class="text-red-500">*</span> </span>
             </label>
-            <input type="text" id="vatNumber" name="legalName" placeholder="Enter VAT Number" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md outline-none focus:border-customGreen" value="">
+            <input type="text" id="vatNumber" name="legalName" placeholder="Enter VAT Number" class="custom-input" value="">
           </div>
 
           <Address/>
@@ -42,9 +42,9 @@
               <span> Provide examples of past work<span class="text-red-500 ml-1">*</span> </span>
               <InfoTooltip text="Please enter your previous work."/>
             </label>
-            <input type="text" id="workLink" name="legalName" placeholder="Work Link" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md outline-none focus:border-customGreen" value="">
-            <input type="text" id="workLink1" name="legalName" placeholder="Work Link" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md outline-none focus:border-customGreen" value="">
-            <input type="text" id="workLink2" name="legalName" placeholder="Work Link" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md outline-none focus:border-customGreen" value="">
+            <input type="text" id="workLink" name="legalName" placeholder="Work Link" class="custom-input" value="">
+            <input type="text" id="workLink1" name="legalName" placeholder="Work Link (optional)" class="custom-input" value="">
+            <input type="text" id="workLink2" name="legalName" placeholder="Work Link (optional)" class="custom-input" value="">
           </div>
 
           <ContactInfo/>
@@ -59,11 +59,3 @@
     </div>
   </div>
 </template>
-
-<script setup>
-import Address from "../components/signin/Address.vue";
-import DocumentUpload from "../components/signin/DocumentUpload.vue";
-import ContactInfo from "../components/signin/ContactInfo.vue";
-import PasswordAndTerms from "../components/signin/PasswordAndTerms.vue";
-import InfoTooltip from "../components/signin/InfoTooltip.vue";
-</script>
