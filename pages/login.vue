@@ -36,7 +36,7 @@
 
           <div class="flex items-center justify-between text-sm font-normal">
             <div class="flex items-center"></div>
-            <a class="text-gray-500 underline" href="/forgot-password">{{pageContent.LOGIN_PAGE.FORGET_TEXT}}</a>
+            <NuxtLink class="text-gray-500 underline" to="/forgot-password">{{pageContent.LOGIN_PAGE.FORGET_TEXT}}</NuxtLink>
           </div>
 
           <div class="pb-5 !mt-8">
@@ -45,9 +45,9 @@
             </button>
             <p class="text-sm font-normal text-center text-gray-500">
               {{pageContent.LOGIN_PAGE.NOT_A_MEMBER_TEXT}}
-              <a class="font-medium text-customGreen" href="/select-user-type">
+              <NuxtLink class="font-medium text-customGreen" to="/registration">
                 {{pageContent.LOGIN_PAGE.REGISTER_TEXT}}
-              </a>
+              </NuxtLink>
             </p>
           </div>
         </div>

@@ -11,6 +11,21 @@
       "FORGET_TEXT": "Forgot Password?",
       "NOT_A_MEMBER_TEXT": "Not a member?",
       "REGISTER_TEXT": "Register"
+    },
+    "FORGET_PASS_PAGE": {
+      "TITLE": "Forgot Password",
+      "SUBTITLE": "By hitting Login, Lorem Ipsum Sit Omet Domet",
+      "EMAIL_INPUT_TEXT": "Email",
+      "EMAIL_INPUT_PLACEHOLDER_TEXT": "Enter Email",
+      "SUBMIT_BUTTON_TEXT": "Submit",
+      "NOT_A_MEMBER_TEXT": "Not a member?",
+      "REGISTER_TEXT": "Register"
+    },
+    "REGISTRATION_PAGE": {
+      "TITLE": "Registration",
+      "FOR_INDIVIDUAL_CLIENT": "For Individual client",
+      "FOR_COMPANY_CLIENT": "For Company client",
+      "FOR_PROFESSIONAL": "For Professional"
     }
   },
   "NL": {
@@ -25,6 +40,21 @@
       "FORGET_TEXT": "Wachtwoord vergeten?",
       "NOT_A_MEMBER_TEXT": "Geen lid?",
       "REGISTER_TEXT": "Register"
+    },
+    "FORGET_PASS_PAGE": {
+      "TITLE": "Forgot Password",
+      "SUBTITLE": "By hitting Login, Lorem Ipsum Sit Omet Domet",
+      "EMAIL_INPUT_TEXT": "Email",
+      "EMAIL_INPUT_PLACEHOLDER_TEXT": "Enter Email",
+      "SUBMIT_BUTTON_TEXT": "Submit",
+      "NOT_A_MEMBER_TEXT": "Not a member?",
+      "REGISTER_TEXT": "Register"
+    },
+    "REGISTRATION_PAGE": {
+      "TITLE": "Registration",
+      "FOR_INDIVIDUAL_CLIENT": "For Individual client",
+      "FOR_COMPANY_CLIENT": "For Company client",
+      "FOR_PROFESSIONAL": "For Professional"
     }
   }
 }

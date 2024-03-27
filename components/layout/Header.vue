@@ -19,9 +19,9 @@
           </div>
         </div>
 
-        <button class="rounded-3xl px-4 bg-[#66C68F] text-white">
+        <NuxtLink to="/login" class="rounded-3xl px-4 pt-1 bg-customGreen text-white">
           Login
-        </button>
+        </NuxtLink>
       </div>
     </div>
   </header>
