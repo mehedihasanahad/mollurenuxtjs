@@ -1,0 +1,30 @@
+{
+  "EN": {
+    "LOGIN_PAGE": {
+      "LOGIN_TITLE": "Login",
+      "LOGIN_SUBTITLE": "By hitting Login, Lorem Ipsum Sit Omet Domet",
+      "EMAIL_INPUT_TEXT": "Email",
+      "PASSWORD_INPUT_TEXT": "Password",
+      "EMAIL_INPUT_PLACEHOLDER_TEXT": "Enter Email",
+      "PASSWORD_INPUT_PLACEHOLDER_TEXT": "Enter Password",
+      "LOGIN_BUTTON_TEXT": "Login",
+      "FORGET_TEXT": "Forgot Password?",
+      "NOT_A_MEMBER_TEXT": "Not a member?",
+      "REGISTER_TEXT": "Register"
+    }
+  },
+  "NL": {
+    "LOGIN_PAGE": {
+      "LOGIN_TITLE": "Log in",
+      "LOGIN_SUBTITLE": "Door op Inloggen te klikken, komt Lorem Ipsum Sit Omet Domet",
+      "EMAIL_INPUT_TEXT": "E-mail",
+      "PASSWORD_INPUT_TEXT": "Wachtwoord",
+      "EMAIL_INPUT_PLACEHOLDER_TEXT": "Voer email in",
+      "PASSWORD_INPUT_PLACEHOLDER_TEXT": "Voer wachtwoord in",
+      "LOGIN_BUTTON_TEXT": "Log in",
+      "FORGET_TEXT": "Wachtwoord vergeten?",
+      "NOT_A_MEMBER_TEXT": "Geen lid?",
+      "REGISTER_TEXT": "Register"
+    }
+  }
+}

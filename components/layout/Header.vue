@@ -28,13 +28,17 @@
 </template>
 
 <script setup>
+import langData from '../../lang.json';
 const lang = ref('EN');
 const langs = ref([]);
 const landDropdown = ref(false);
+// store currentLang file globally
+const pageContent = useState('currentLangContent', () => langData[lang.value]);
 
 function setLang(selectedLang) {
   lang.value = selectedLang;
   removeCurrentSelected();
+  pageContent.value = langData[lang.value];
 }
 
 function removeCurrentSelected() {
