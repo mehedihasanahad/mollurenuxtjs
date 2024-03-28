@@ -1,6 +1,6 @@
 <template>
   <div>
-    <label for="ecommerce" class="text-sm font-normal text-gray-500">
+    <span class="text-sm font-normal text-gray-500 cursor-[context-menu]">
       <span class="white"> Provide documentation for the registration in the chamber of
         <span class="whitespace-nowrap">e-commerce</span>
         <span class="text-red-500 ml-1">*</span>
@@ -12,7 +12,7 @@
           <p>Please enter your doc in pdf format.</p>
         </span>
       </span>
-    </label>
+    </span>
     <div>
       <label for="documentation" class="right-0 z-50 flex items-center justify-center px-6 py-4 mt-2 bg-gray-200 rounded-md shadow-md cursor-pointer bottom-3 w-min h-min">
         <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512" class="text-gray-400 cursor-pointer" height="18" width="18" xmlns="http://www.w3.org/2000/svg">

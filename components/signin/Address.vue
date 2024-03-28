@@ -6,7 +6,7 @@
     </label>
     <div class="grid grid-cols-1 gap-2 md:grid-cols-2 ">
       <div class="w-full ">
-        <input type="text" name="street" placeholder="Enter Street" class="custom-input" value="">
+        <input type="text" name="street" id="address" placeholder="Enter Street" class="custom-input" value="" autocomplete="autocomplete">
       </div>
       <div class="w-full ">
         <input type="text" name="number" placeholder="Enter Number" class="custom-input" value="">

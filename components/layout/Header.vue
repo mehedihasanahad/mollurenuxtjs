@@ -1,9 +1,9 @@
 <template>
   <header class="max-h-[110px] py-6">
     <div class="flex justify-between items-center">
-      <div>
+      <NuxtLink to="/">
         <img src="/public/Logo.svg"  alt="Mollure Logo" class="w-[60%] md:w-full"/>
-      </div>
+      </NuxtLink>
       <div class="flex gap-x-2">
         <div class="relative" @click="landDropdown = !landDropdown">
           <div class="flex border rounded-3xl pl-4 pr-2 py-1 cursor-pointer border-gray-300 select-none">

@@ -7,19 +7,19 @@
     </div>
     <div class="flex items-start justify-center w-full h-full">
       <div class="w-full md:w-[32rem] flex flex-col space-y-4 my-10 md:mt-10 z-30">
-        <NuxtLink>
+        <NuxtLink to="/signup/individual">
           <div class="px-3 py-12 bg-white border  shadow-sm cursor-pointer md:px-6 rounded-3xl hover:bg-customGreen hover:text-white">
             <h2 class="mb-2 text-2xl font-semibold md:text-3xl ">{{ pageContent.REGISTRATION_PAGE.FOR_INDIVIDUAL_CLIENT }}</h2>
           </div>
         </NuxtLink>
 
-        <NuxtLink>
+        <NuxtLink to="/signup/company">
           <div class="px-3 py-12 bg-white border  shadow-sm cursor-pointer md:px-6 rounded-3xl hover:bg-customGreen hover:text-white">
             <h2 class="mb-2 text-2xl font-semibold md:text-3xl ">{{ pageContent.REGISTRATION_PAGE.FOR_COMPANY_CLIENT }}</h2>
           </div>
         </NuxtLink>
 
-        <NuxtLink>
+        <NuxtLink to="/signup/professional">
           <div class="px-3 py-12 bg-white border  shadow-sm cursor-pointer md:px-6 rounded-3xl hover:bg-customGreen hover:text-white">
             <h2 class="mb-2 text-2xl font-semibold md:text-3xl ">{{ pageContent.REGISTRATION_PAGE.FOR_PROFESSIONAL }}</h2>
           </div>
