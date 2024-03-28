@@ -1,3 +1,3 @@
 <template>
-  <IndividualUserSignup/>
+  <IndividualUserSignup class="mt-4"/>
 </template>

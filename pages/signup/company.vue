@@ -1,3 +1,3 @@
 <template>
-  <CompanyClientSignup/>
+  <CompanyClientSignup class="mt-4"/>
 </template>

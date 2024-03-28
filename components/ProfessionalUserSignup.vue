@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-if="!formType || formType === 'create'" class="mt-4">
+    <div v-if="!formType || formType === 'create'">
       <div class="flex items-start justify-center w-full h-full">
         <div class="w-full md:w-[32rem] border rounded-3xl my-10 md:mt-20 shadow-md md:p-3  bg-white z-30">
           <div class="w-full p-3 space-y-2.5">
@@ -55,7 +55,8 @@
         </div>
       </div>
     </div>
-    <div v-if="formType === 'edit'" class="mt-4">
+
+    <div v-if="formType === 'edit'">
       <div class="flex items-start justify-center w-full h-full">
         <div class="w-full md:w-[32rem] border rounded-3xl my-10 md:mt-20 shadow-md md:p-3  bg-white z-30">
           <div class="w-full p-3 space-y-2.5">
