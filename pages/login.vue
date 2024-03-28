@@ -27,7 +27,12 @@
           </div>
 
           <div class="flex items-center justify-between text-sm font-normal">
-            <div class="flex items-center"></div>
+            <div class="flex items-center mt-2">
+              <input type="checkbox" id="subscribeToBlog" name="acceptTerms" class="w-4 h-4 border-2 rounded-sm appearance-none cursor-pointer" value="false">
+              <label class="text-sm font-normal text-gray-500 cursor-pointer ms-2" for="subscribeToBlog">
+                {{pageContent.LOGIN_PAGE.REMEMBER_ME}}
+              </label>
+            </div>
             <NuxtLink class="text-gray-500 underline" to="/forgot-password">{{pageContent.LOGIN_PAGE.FORGET_TEXT}}</NuxtLink>
           </div>
 

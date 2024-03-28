@@ -10,7 +10,8 @@
       "LOGIN_BUTTON_TEXT": "Login",
       "FORGET_TEXT": "Forgot Password?",
       "NOT_A_MEMBER_TEXT": "Not a member?",
-      "REGISTER_TEXT": "Register"
+      "REGISTER_TEXT": "Register",
+      "REMEMBER_ME": "Remember Me"
     },
     "FORGET_PASS_PAGE": {
       "TITLE": "Forgot Password",
@@ -39,7 +40,8 @@
       "LOGIN_BUTTON_TEXT": "Log in",
       "FORGET_TEXT": "Wachtwoord vergeten?",
       "NOT_A_MEMBER_TEXT": "Geen lid?",
-      "REGISTER_TEXT": "Register"
+      "REGISTER_TEXT": "Register",
+      "REMEMBER_ME": "Onthoud me"
     },
     "FORGET_PASS_PAGE": {
       "TITLE": "Forgot Password",

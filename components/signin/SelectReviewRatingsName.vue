@@ -35,7 +35,7 @@
 <script setup>
 const nameDropdown = ref(false);
 const name = ref('Select Name For Rating And Review');
-const names = ['First Name', 'Last Name', 'Full Name'];
+const names = ['First Name', 'Last Name', 'First & Last Name', 'Abbreviation'];
 
 function setName(selectedGender) {
   name.value = selectedGender;
