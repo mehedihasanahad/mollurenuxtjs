@@ -49,7 +49,7 @@
         <div class="w-full md:w-[32rem] border rounded-3xl my-10 md:mt-20 shadow-md md:p-3  bg-white z-30">
           <div class="w-full p-3 space-y-2.5">
             <div>
-              <h2 class="text-[28px] mb-2 font-[customfontSemibold]">Sign Up</h2>
+              <h2 class="text-[28px] mb-2 font-[customfontSemibold]">User Profile</h2>
             </div>
 
             <div>
