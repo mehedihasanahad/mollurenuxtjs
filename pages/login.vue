@@ -37,7 +37,7 @@
           </div>
 
           <div class="pb-5 !mt-8">
-            <button class="bg-customGreen text-white w-full py-3 mb-4 rounded-md text-base font-medium">
+            <button @click="loginFn" class="bg-customGreen text-white w-full py-3 mb-4 rounded-md text-base font-medium">
               {{pageContent.LOGIN_PAGE.LOGIN_BUTTON_TEXT}}
             </button>
             <p class="text-sm font-normal text-center text-gray-500">
@@ -56,4 +56,9 @@
 <script setup>
 const pageContent = useState('currentLangContent');
 const loginPasswordType = ref(true);
+
+// login functionality
+function loginFn() {
+  navigateTo('/user/profile?user_type=professional_user');
+}
 </script>

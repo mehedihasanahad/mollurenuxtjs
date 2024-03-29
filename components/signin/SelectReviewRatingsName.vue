@@ -67,10 +67,10 @@
 </template>
 
 <script setup>
+const props = defineProps(['formType', 'editable']);
 const nameDropdown = ref(false);
 const name = ref('Select Name For Rating And Review');
 const names = ['First Name', 'Last Name', 'First & Last Name', 'Abbreviation'];
-const props = defineProps(['formType', 'editable']);
 
 function setName(selectedGender) {
   name.value = selectedGender;

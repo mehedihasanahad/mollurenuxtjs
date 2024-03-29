@@ -57,31 +57,31 @@
                 <span> Legal Name <span class="text-red-500">*</span> </span>
                 <InfoTooltip text="Enter your full name."/>
               </label>
-              <input type="text" id="legalName" name="legalName" placeholder="Enter Legal Name" class="custom-input" value="">
+              <input type="text" id="legalName" name="legalName" placeholder="Enter Legal Name" class="custom-input pointer-events-none bg-gray-100" value="">
             </div>
 
             <div>
               <label for="cocNumber" class="flex items-center gap-1 text-sm font-normal text-gray-500">
                 <span> COC Number <span class="text-red-500">*</span> </span>
               </label>
-              <input type="text" id="cocNumber" name="legalName" placeholder="Enter COC Number" class="custom-input" value="">
+              <input type="text" id="cocNumber" name="legalName" placeholder="Enter COC Number" class="custom-input pointer-events-none bg-gray-100" value="">
             </div>
 
             <div>
               <label for="vatNumber" class="flex items-center gap-1 text-sm font-normal text-gray-500">
                 <span> VAT Number <span class="text-red-500">*</span> </span>
               </label>
-              <input type="text" id="vatNumber" name="legalName" placeholder="Enter VAT Number" class="custom-input" value="">
+              <input type="text" id="vatNumber" name="legalName" placeholder="Enter VAT Number" class="custom-input pointer-events-none bg-gray-100" value="">
             </div>
 
-            <Address/>
+            <Address formType="edit" :editable="editable"/>
 
-            <ContactInfo/>
+            <ContactInfo formType="edit" :editable="editable"/>
 
-            <PasswordAndTerms/>
+            <PasswordAndTerms formType="edit" :editable="editable"/>
 
             <button class="!mt-8 bg-customGreen text-white w-full py-3  mb-4  rounded-md text-base font-medium">
-              Sign Up
+              Update
             </button>
           </div>
         </div>
@@ -91,5 +91,5 @@
 </template>
 
 <script setup>
-const props = defineProps(['formType'])
+const props = defineProps(['formType', 'editable']);
 </script>

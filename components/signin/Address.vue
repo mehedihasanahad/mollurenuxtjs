@@ -1,22 +1,23 @@
 <template>
   <div>
-    <label for="address" class="flex items-center gap-1 text-sm font-normal text-gray-500">
-      <span> Address <span class="text-red-500">*</span> </span>
-      <InfoTooltip text="Enter your full address."/>
-    </label>
-    <div class="grid grid-cols-1 gap-2 md:grid-cols-2 ">
-      <div class="w-full ">
-        <input type="text" name="street" id="address" placeholder="Enter Street" class="custom-input" value="" autocomplete="autocomplete">
-      </div>
-      <div class="w-full ">
-        <input type="text" name="number" placeholder="Enter Number" class="custom-input" value="">
-      </div>
-      <div class="w-full ">
-        <input type="text" name="postalCode" placeholder="Enter Postal Code" class="custom-input" value="">
-      </div>
+    <div v-if="!formType || (formType === 'create')">
+      <label for="address" class="flex items-center gap-1 text-sm font-normal text-gray-500">
+        <span> Address <span class="text-red-500">*</span> </span>
+        <InfoTooltip text="Enter your full address."/>
+      </label>
+      <div class="grid grid-cols-1 gap-2 md:grid-cols-2 ">
+        <div class="w-full ">
+          <input type="text" name="street" id="address" placeholder="Enter Street" class="custom-input" value="" autocomplete="autocomplete">
+        </div>
+        <div class="w-full ">
+          <input type="text" name="number" placeholder="Enter Number" class="custom-input" value="">
+        </div>
+        <div class="w-full ">
+          <input type="text" name="postalCode" placeholder="Enter Postal Code" class="custom-input" value="">
+        </div>
 
-      <div class="w-full">
-        <div class="relative mt-1">
+        <div class="w-full">
+          <div class="relative mt-1">
           <span class="inline-block w-full rounded-md shadow-sm" @click="provincesDropdown = !provincesDropdown">
             <button class="relative w-full py-3 pl-3 pr-8 mt-1 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
               <span class="text-gray-400 block truncate">{{province}}</span>
@@ -25,27 +26,27 @@
               </span>
             </button>
           </span>
-          <div v-click-outside="closeDropDown" v-if="provincesDropdown" class="absolute z-10 overflow-auto max-h-56 w-full px-3 bg-white rounded-md selectDropdown shadow-lg mb-11 custom-scrollbar">
-            <div v-if="provinces">
-              <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
-                <li @click="setProvince(province)" v-for="(province, index) in provinces" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
-                  {{province.name}}
-                </li>
-              </ul>
-            </div>
-            <div v-else>
-              <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
-                <li class="text-gray-900 cursor-default select-none relative text-sm font-normal py-2">
-                  Loading...
-                </li>
-              </ul>
+            <div v-click-outside="closeDropDown" v-if="provincesDropdown" class="absolute z-10 overflow-auto max-h-56 w-full px-3 bg-white rounded-md selectDropdown shadow-lg mb-11 custom-scrollbar">
+              <div v-if="provinces">
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li @click="setProvince(province)" v-for="(province, index) in provinces" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
+                    {{province.name}}
+                  </li>
+                </ul>
+              </div>
+              <div v-else>
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li class="text-gray-900 cursor-default select-none relative text-sm font-normal py-2">
+                    Loading...
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
-      </div>
 
-      <div class="w-full">
-        <div class="relative mt-1">
+        <div class="w-full">
+          <div class="relative mt-1">
           <span class="inline-block w-full rounded-md shadow-sm" @click="municipalityDropdown = !municipalityDropdown">
             <button class="relative w-full py-3 pl-3 pr-8 mt-1 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
               <span class="text-gray-400 block truncate">{{municipality}}</span>
@@ -54,20 +55,97 @@
               </span>
             </button>
           </span>
-          <div v-click-outside="closeDropDown" v-if="municipalityDropdown" class="absolute z-10 overflow-auto max-h-56 w-full px-3 bg-white rounded-md selectDropdown shadow-lg mb-11 custom-scrollbar">
-            <div v-if="municipalities">
-              <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
-                <li @click="setMunicipality(municipality)" v-for="(municipality, index) in municipalities" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
-                  {{municipality.name}}
-                </li>
-              </ul>
+            <div v-click-outside="closeDropDown" v-if="municipalityDropdown" class="absolute z-10 overflow-auto max-h-56 w-full px-3 bg-white rounded-md selectDropdown shadow-lg mb-11 custom-scrollbar">
+              <div v-if="municipalities">
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li @click="setMunicipality(municipality)" v-for="(municipality, index) in municipalities" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
+                    {{municipality.name}}
+                  </li>
+                </ul>
+              </div>
+              <div v-else>
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li class="text-gray-900 cursor-default select-none relative text-sm font-normal py-2">
+                    Loading...
+                  </li>
+                </ul>
+              </div>
             </div>
-            <div v-else>
-              <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
-                <li class="text-gray-900 cursor-default select-none relative text-sm font-normal py-2">
-                  Loading...
-                </li>
-              </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div v-if="formType === 'edit'">
+      <label for="address" class="flex items-center gap-1 text-sm font-normal text-gray-500">
+        <span> Address <span class="text-red-500">*</span> </span>
+        <InfoTooltip text="Enter your full address."/>
+      </label>
+      <div class="grid grid-cols-1 gap-2 md:grid-cols-2 ">
+        <div class="w-full ">
+          <input type="text" name="street" id="address" placeholder="Enter Street" class="custom-input pointer-events-none bg-gray-100" value="" autocomplete="autocomplete">
+        </div>
+        <div class="w-full ">
+          <input type="text" name="number" placeholder="Enter Number" class="custom-input" :class="{'pointer-events-none bg-gray-100': !editable}" value="">
+        </div>
+        <div class="w-full ">
+          <input type="text" name="postalCode" placeholder="Enter Postal Code" class="custom-input" :class="{'pointer-events-none bg-gray-100': !editable}" value="">
+        </div>
+
+        <div class="w-full">
+          <div class="relative mt-1">
+          <span class="inline-block w-full rounded-md shadow-sm mt-1" :class="{'pointer-events-none bg-gray-100': !editable}" @click="provincesDropdown = !provincesDropdown">
+            <button class="relative w-full py-3 pl-3 pr-8 mt-0 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
+              <span class="text-gray-400 block truncate">{{province}}</span>
+              <span class="absolute inset-y-0 flex items-center pr-2 ml-3 pointer-events-none right-1">
+                <img src="public/Icons/Icons_second part copy/SVGs/Arrow/Chevron_Down.svg" alt="arrow">
+              </span>
+            </button>
+          </span>
+            <div v-click-outside="closeDropDown" v-if="provincesDropdown" class="absolute z-10 overflow-auto max-h-56 w-full px-3 bg-white rounded-md selectDropdown shadow-lg mb-11 custom-scrollbar">
+              <div v-if="provinces">
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li @click="setProvince(province)" v-for="(province, index) in provinces" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
+                    {{province.name}}
+                  </li>
+                </ul>
+              </div>
+              <div v-else>
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li class="text-gray-900 cursor-default select-none relative text-sm font-normal py-2">
+                    Loading...
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="w-full">
+          <div class="relative mt-1">
+          <span class="inline-block w-full rounded-md shadow-sm mt-1" :class="{'pointer-events-none bg-gray-100': !editable}" @click="municipalityDropdown = !municipalityDropdown">
+            <button class="relative w-full py-3 pl-3 pr-8 mt-0 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
+              <span class="text-gray-400 block truncate">{{municipality}}</span>
+              <span class="absolute inset-y-0 flex items-center pr-2 ml-3 pointer-events-none right-1">
+                <img src="public/Icons/Icons_second part copy/SVGs/Arrow/Chevron_Down.svg" alt="arrow">
+              </span>
+            </button>
+          </span>
+            <div v-click-outside="closeDropDown" v-if="municipalityDropdown" class="absolute z-10 overflow-auto max-h-56 w-full px-3 bg-white rounded-md selectDropdown shadow-lg mb-11 custom-scrollbar">
+              <div v-if="municipalities">
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li @click="setMunicipality(municipality)" v-for="(municipality, index) in municipalities" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
+                    {{municipality.name}}
+                  </li>
+                </ul>
+              </div>
+              <div v-else>
+                <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                  <li class="text-gray-900 cursor-default select-none relative text-sm font-normal py-2">
+                    Loading...
+                  </li>
+                </ul>
+              </div>
             </div>
           </div>
         </div>
@@ -78,6 +156,7 @@
 
 <script setup>
 import InfoTooltip from '../signin/InfoTooltip.vue';
+const props = defineProps(['formType', 'editable']);
 // provinces setup
 const provinces = ref(null);
 const provincesDropdown = ref(false);

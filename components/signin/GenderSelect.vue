@@ -66,10 +66,10 @@
 </template>
 
 <script setup>
+const props = defineProps(['formType', 'editable']);
 const genderDropdown = ref(false);
 const gender = ref('Select Gender');
 const genders = ['Male', 'Female', 'Other'];
-const props = defineProps(['formType', 'editable']);
 
 function setGender(selectedGender) {
   gender.value = selectedGender;
