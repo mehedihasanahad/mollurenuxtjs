@@ -54,6 +54,10 @@
 </template>
 
 <script setup>
+const globalStore = useGlobalStore();
+const globalStoreState = globalStore.$state;
+console.log(globalStoreState)
+
 const pageContent = useState('currentLangContent');
 const loginPasswordType = ref(true);
 

@@ -18,5 +18,9 @@ export default defineNuxtConfig({
     options: {
       scrollBehaviorType: 'smooth'
     }
-  }
+  },
+  modules: [
+    '@pinia/nuxt',
+    '@pinia-plugin-persistedstate/nuxt'
+  ]
 })
