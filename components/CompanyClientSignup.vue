@@ -52,6 +52,8 @@
               <h2 class="text-[28px] mb-2 font-[customfontSemibold]">User Profile</h2>
             </div>
 
+            <ProfilePicUpload/>
+
             <div>
               <label for="legalName" class="flex items-center gap-1 text-sm font-normal text-gray-500">
                 <span> Legal Name <span class="text-red-500">*</span> </span>

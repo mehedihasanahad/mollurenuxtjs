@@ -86,15 +86,15 @@
           <input type="text" name="street" id="address" placeholder="Enter Street" class="custom-input pointer-events-none bg-gray-100" value="" autocomplete="autocomplete">
         </div>
         <div class="w-full ">
-          <input type="text" name="number" placeholder="Enter Number" class="custom-input" :class="{'pointer-events-none bg-gray-100': !editable}" value="">
+          <input type="text" name="number" placeholder="Enter Number" class="custom-input pointer-events-none bg-gray-100" value="">
         </div>
         <div class="w-full ">
-          <input type="text" name="postalCode" placeholder="Enter Postal Code" class="custom-input" :class="{'pointer-events-none bg-gray-100': !editable}" value="">
+          <input type="text" name="postalCode" placeholder="Enter Postal Code" class="custom-input pointer-events-none bg-gray-100" value="">
         </div>
 
         <div class="w-full">
           <div class="relative mt-1">
-          <span class="inline-block w-full rounded-md shadow-sm mt-1" :class="{'pointer-events-none bg-gray-100': !editable}" @click="provincesDropdown = !provincesDropdown">
+          <span class="inline-block w-full rounded-md shadow-sm mt-1 pointer-events-none bg-gray-100" @click="provincesDropdown = !provincesDropdown">
             <button class="relative w-full py-3 pl-3 pr-8 mt-0 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
               <span class="text-gray-400 block truncate">{{province}}</span>
               <span class="absolute inset-y-0 flex items-center pr-2 ml-3 pointer-events-none right-1">
@@ -123,7 +123,7 @@
 
         <div class="w-full">
           <div class="relative mt-1">
-          <span class="inline-block w-full rounded-md shadow-sm mt-1" :class="{'pointer-events-none bg-gray-100': !editable}" @click="municipalityDropdown = !municipalityDropdown">
+          <span class="inline-block w-full rounded-md shadow-sm mt-1 pointer-events-none bg-gray-100" @click="municipalityDropdown = !municipalityDropdown">
             <button class="relative w-full py-3 pl-3 pr-8 mt-0 text-base font-normal text-left transition duration-150 ease-in-out custom-input" type="button">
               <span class="text-gray-400 block truncate">{{municipality}}</span>
               <span class="absolute inset-y-0 flex items-center pr-2 ml-3 pointer-events-none right-1">

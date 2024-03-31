@@ -1,7 +1,7 @@
 <template>
   <div>
-    <div class="px-44 pb-[2.2rem] mt-6">
-      <div class="text-center sm:flex justify-between">
+    <div class="md:px-[8%] pb-[2.2rem] mt-6">
+      <div class="text-center md:flex justify-between flex-wrap">
         <h3 @click="setTab('profile')" class="font-[customfontSemibold] text-xl cursor-pointer" :class="{'text-[#A1A1A1]': (activeTab !== 'profile')}">
           Profile
         </h3>

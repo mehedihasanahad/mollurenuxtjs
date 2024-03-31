@@ -64,7 +64,7 @@
               <h2 class="text-[28px] mb-2 font-[customfontSemibold]">User Profile</h2>
             </div>
 
-            <ProfilePicUpload/>
+            <ProfilePicUpload :editable="editable"/>
 
             <div>
               <label for="legalName" class="flex items-center gap-1 text-sm font-normal text-gray-500">

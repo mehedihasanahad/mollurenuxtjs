@@ -67,6 +67,8 @@
               <h2 class="text-[28px] mb-2 font-[customfontSemibold]">User Profile</h2>
             </div>
 
+            <ProfilePicUpload/>
+
             <!--first name & last name-->
             <div class="flex flex-col space-y-5 md:space-x-2 md:space-y-0 md:flex-row">
               <div class="w-full md:w-1/2">
@@ -86,7 +88,7 @@
             <div class="w-full relative">
               <label for="dob" class="block text-sm font-normal text-gray-500">Date of Birth <span class="text-red-500">*</span></label>
               <input type="date" id="dob" name="dob" placeholder="Enter Date of Birth" class="w-full px-3 py-3 mt-2 text-base font-normal border border-gray-300 rounded-md focus:outline-none focus:ring focus:border-green-400 focus:bg-white" :class="{'pointer-events-none bg-gray-100': !editable}" value="">
-              <div class="h-6 w-10 bg-white absolute right-2 top-10" :class="{'!bg-gray-100': !editable}"></div>
+              <div class="hidden sm:block h-6 w-10 bg-white absolute right-2 top-10" :class="{'!bg-gray-100': !editable}"></div>
             </div>
 
             <!--gender selection-->
