@@ -1,9 +1,12 @@
 <template>
   <header class="max-h-[110px] py-6">
     <div class="flex justify-between items-center">
+      <!--logo part-->
       <NuxtLink to="/">
         <img src="/public/Logo.svg"  alt="Mollure Logo" class="w-[60%] md:w-full"/>
       </NuxtLink>
+
+      <!--right part-->
       <div class="flex gap-x-2">
         <div class="relative" @click="landDropdown = !landDropdown">
           <div class="flex border rounded-3xl pl-4 pr-2 py-1 cursor-pointer border-gray-300 select-none">
@@ -19,9 +22,22 @@
           </div>
         </div>
 
-        <NuxtLink to="/login" class="rounded-3xl px-4 pt-1 bg-customGreen text-white">
-          Login
-        </NuxtLink>
+        <client-only>
+          <NuxtLink v-if="!globalStore.userInfo" to="/login" class="rounded-3xl px-4 pt-1 bg-customGreen text-white">
+            Login
+          </NuxtLink>
+          <div v-else class="relative">
+            <div @click="profileDropdown = !profileDropdown" class="h-8 w-8 rounded-full bg-customGreen flex justify-center items-center text-white text-sm cursor-pointer">
+              MH
+            </div>
+            <div v-click-outside="closeProfileDropDown" v-if="profileDropdown" class="absolute z-10 -right-4 top-10 max-h-56 w-40 bg-white rounded-md border border-gray-100 shadow-xl mb-11">
+              <ul>
+                <li @click="logout" class="cursor-pointer px-3 py-2 hover:bg-green-50">Logout</li>
+                <li class="cursor-pointer px-3 py-2 hover:bg-green-50 text-red-500">Delete Account</li>
+              </ul>
+            </div>
+          </div>
+        </client-only>
       </div>
     </div>
   </header>
@@ -32,8 +48,13 @@ import langData from '../../lang.json';
 const lang = ref('EN');
 const langs = ref([]);
 const landDropdown = ref(false);
+const profileDropdown = ref(false);
+
 // store currentLang file globally
 const pageContent = useState('currentLangContent', () => langData[lang.value]);
+
+// global store
+const globalStore = useGlobalStore();
 
 function setLang(selectedLang) {
   lang.value = selectedLang;
@@ -49,6 +70,14 @@ function removeCurrentSelected() {
 
 function closeDropDown(event) {
   if (event.target) landDropdown.value = false;
+}
+function closeProfileDropDown(event) {
+  if (event.target) profileDropdown.value = false;
+}
+
+function logout() {
+  globalStore.userInfo = null;
+  navigateTo('/login');
 }
 
 onMounted(() => {

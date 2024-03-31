@@ -1,7 +1,6 @@
 export const useGlobalStore = defineStore('websiteStore', {
     state: () => ({
-        name: 'sdfsdf',
-        description: ''
+        userInfo: null
     }),
     persist: {
         storage: persistedState.localStorage,

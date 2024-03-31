@@ -56,13 +56,17 @@
 <script setup>
 const globalStore = useGlobalStore();
 const globalStoreState = globalStore.$state;
-console.log(globalStoreState)
 
 const pageContent = useState('currentLangContent');
 const loginPasswordType = ref(true);
 
 // login functionality
 function loginFn() {
+  globalStoreState.userInfo = {
+    name: 'Mehedi Hasan Ahad',
+    age: 40,
+    userType: 1 // 1= professional; 2 = company; 3 = individual
+  };
   navigateTo('/user/profile?user_type=professional_user');
 }
 </script>
