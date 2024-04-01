@@ -6,11 +6,11 @@
           Profile
         </h3>
 
-        <h3 v-if="$route.query.user_type === 'company_client'" @click="setTab('bookings')" class="font-[customfontSemibold] text-xl cursor-pointer" :class="{'text-[#A1A1A1]': (activeTab !== 'bookings')}">
+        <h3 v-if="$route.query.user_type === 'company_client' || $route.query.user_type === 'individual'" @click="setTab('bookings')" class="font-[customfontSemibold] text-xl cursor-pointer" :class="{'text-[#A1A1A1]': (activeTab !== 'bookings')}">
           Bookings
         </h3>
 
-        <h3 v-if="$route.query.user_type === 'company_client'" @click="setTab('favourites')" class="font-[customfontSemibold] text-xl cursor-pointer" :class="{'text-[#A1A1A1]': (activeTab !== 'favourites')}">
+        <h3 v-if="$route.query.user_type === 'company_client' || $route.query.user_type === 'individual'" @click="setTab('favourites')" class="font-[customfontSemibold] text-xl cursor-pointer" :class="{'text-[#A1A1A1]': (activeTab !== 'favourites')}">
           Favourites
         </h3>
 
