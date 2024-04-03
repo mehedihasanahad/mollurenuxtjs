@@ -6,7 +6,7 @@
     </h1>
 
     <div class="flex justify-center my-4">
-      <button class="rounded-xl py-4 px-20 bg-customGreen text-white hover:bg-white hover:outline hover:outline-1 hover:outline-customGreen hover:text-customGreen transition duration-500 mt-6">Subscribe</button>
+      <button class="rounded-xl py-4 px-20 bg-customGreen text-white mt-6">Subscribe</button>
     </div>
   </div>
 </template>

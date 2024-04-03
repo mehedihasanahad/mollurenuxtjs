@@ -31,7 +31,7 @@ function selectCategory(selectedId) {
   const selectedCategory = categories.value.find((item)=> item.id === selectedId);
   if (selectedCategory) {
     console.log(selectedId, selectedCategory, 'ff')
-    selectedCategory.selected = true;
+    selectedCategory.selected = !selectedCategory.selected;
   }
 }
 </script>
