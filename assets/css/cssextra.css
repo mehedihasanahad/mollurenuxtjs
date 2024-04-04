@@ -16,7 +16,7 @@
 }
 
 .base-gradient {
-    outline-color: linear-gradient(to right, #21B8BF , #66C68F);
+    background-image: linear-gradient(to left, #21B8BF , #66C68F);
 }
 
 .bg-mix-blue {
@@ -24,6 +24,7 @@
 }
 
 /*custom scrollbar css*/
+
 /* width */
 .custom-scrollbar::-webkit-scrollbar {
     width: 5px;
@@ -38,6 +39,24 @@
 }
 /* Handle on hover */
 .custom-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #abaaaa;
+}
+
+/* width */
+.globalCustomScrollBar::-webkit-scrollbar {
+    width: 10px;
+}
+/* Track */
+.globalCustomScrollBar::-webkit-scrollbar-track {
+    background: white;
+}
+/* Handle */
+.globalCustomScrollBar::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: #eeeeee;
+}
+/* Handle on hover */
+.globalCustomScrollBar::-webkit-scrollbar-thumb:hover {
     background: #abaaaa;
 }
 /*custom scrollbar css*/

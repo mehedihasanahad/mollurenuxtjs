@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="min-h-[120vh]">
     <div class="flex items-start justify-center w-full h-full">
       <div class="w-full md:w-[30rem] border rounded-3xl  my-10 md:mt-10 shadow-md md:px-2 py-2 bg-white z-30">
         <div class="w-full p-3 space-y-4">

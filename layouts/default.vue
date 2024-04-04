@@ -5,11 +5,6 @@
     <main>
       <slot />
     </main>
+    <ChatCircle/>
   </div>
 </template>
-<script>
-import DefaultLayoutBg from "../components/layout/DefaultLayoutBg.vue";
-export default {
-  components: {DefaultLayoutBg}
-}
-</script>
