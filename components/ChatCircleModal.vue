@@ -39,7 +39,7 @@
     <!--User Chat list -->
     <div class="h-64 overflow-auto globalCustomScrollBar overscroll-contain">
       <NuxtLink to="/chats/all-chats" v-for="n in 10" :key="n">
-        <div class="p-4 cursor-pointer border-b border-b border-b-gray-300 border-l border-l-4 border-l-white hover:border-l-customGreen hover:bg-lightGreen">
+        <div @click="$emit('closeChatBox')" class="p-4 cursor-pointer border-b border-b border-b-gray-300 border-l border-l-4 border-l-white hover:border-l-customGreen hover:bg-lightGreen">
           <div class="flex gap-3">
             <div class="w-[15%] sm:w-[10%] rounded-full">
               <img draggable="false" class="w-full rounded-full object-cover" src="/public/images/blog/blog-comment-1.svg" alt="blog-commenter-image"/>
