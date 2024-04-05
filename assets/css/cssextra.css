@@ -44,11 +44,11 @@
 
 /* width */
 .globalCustomScrollBar::-webkit-scrollbar {
-    width: 10px;
+    width: 8px;
 }
 /* Track */
 .globalCustomScrollBar::-webkit-scrollbar-track {
-    background: white;
+    background: transparent;
 }
 /* Handle */
 .globalCustomScrollBar::-webkit-scrollbar-thumb {
