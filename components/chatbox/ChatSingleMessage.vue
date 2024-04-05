@@ -1,6 +1,6 @@
 <template>
   <div class="flex justify-between px-4 py-6 items-start">
-    <div class="flex gap-x-3">
+    <div class="w-[95%] flex gap-x-3">
       <div class="w-9 h-9 rounded-full">
         <img draggable="false" class="w-9 h-9 object-cover rounded-full" src="/public/Icons/chat/pro-user.svg" alt="blog-commenter-image"/>
       </div>
@@ -19,6 +19,6 @@
     </div>
 
     <!-- Chat options -->
-    <ChatMessageActions class="w-full"/>
+    <ChatMessageActions />
   </div>
 </template>

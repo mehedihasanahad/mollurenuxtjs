@@ -13,8 +13,7 @@
 </template>
 
 <script setup>
-import { VueChatEmojiComponent } from "@nguyenvanlong/vue3-chat-emoji";
-import "@nguyenvanlong/vue3-chat-emoji/dist/index.mjs.css";
+import VueChatEmojiComponent from '/plugins/emoji.js';
 
 const emit = defineEmits(['getEmoji'])
 

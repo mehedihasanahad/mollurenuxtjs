@@ -22,5 +22,8 @@ export default defineNuxtConfig({
   modules: [
     '@pinia/nuxt',
     '@pinia-plugin-persistedstate/nuxt'
+  ],
+  plugins: [
+    {src: '/plugins/emoji', ssr: false}
   ]
 })
