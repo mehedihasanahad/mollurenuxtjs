@@ -1,19 +1,18 @@
 <template>
   <div class="relative">
     <img @click="open = !open" class="cursor-pointer" draggable="false" src="/public/Icons/chat/tabler_mood-smile.svg" alt="file-upload" />
-    <VueChatEmojiComponent
-        v-if="open"
-        class="absolute top-14 -left-[130px]"
-        :open="true"
-        :width="width"
-        :height="height"
-        @handle="selectedEmoji"
-    />
+<!--    <VueChatEmojiComponent-->
+<!--        v-if="open"-->
+<!--        class="absolute top-14 -left-[130px]"-->
+<!--        :open="true"-->
+<!--        :width="width"-->
+<!--        :height="height"-->
+<!--        @handle="selectedEmoji"-->
+<!--    />-->
   </div>
 </template>
 
 <script setup>
-import VueChatEmojiComponent from '/plugins/emoji.js';
 
 const emit = defineEmits(['getEmoji'])
 
