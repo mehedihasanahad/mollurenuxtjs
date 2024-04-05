@@ -11,7 +11,7 @@
 
     <!--User Chat list -->
     <div class="h-[70vh] overflow-auto globalCustomScrollBar overscroll-contain">
-      <div @click="$emit('closeChatBox')" v-for="n in 15" :key="n" class="py-4 pl-4 pr-2 cursor-pointer border-b border-b border-b-gray-300 border-l border-l-4 border-l-white hover:border-l-customGreen hover:bg-[#F7FCF9]">
+      <div @click="$emit('closeChatBox')" v-for="n in 15" :key="n" class="py-4 pl-4 pr-2 cursor-pointer border-b border-b-2 border-b-gray-100 border-l border-l-4 border-l-white hover:border-l-customGreen hover:bg-[#F7FCF9]">
           <div class="flex gap-3">
             <div class="w-[15%] sm:w-[10%] rounded-full">
               <img draggable="false" class="w-full rounded-full object-cover" src="/public/images/blog/blog-comment-1.svg" alt="blog-commenter-image"/>

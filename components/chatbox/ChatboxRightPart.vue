@@ -3,8 +3,8 @@
     <!-- chat right header -->
     <ChatRightHeader/>
 
-    <!-- chat main box -->
-    <div class="h-[68vh] border-b border-b-2 border-b-gray-100"></div>
+    <!-- chat messages -->
+    <ChatMessages/>
 
     <!-- chat footer -->
     <div class="relative p-5 border-b border-b-2 border-b-gray-100">

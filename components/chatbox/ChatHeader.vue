@@ -11,8 +11,9 @@
     </div>
 
     <div class="flex gap-x-3">
-      <img class="cursor-pointer rounded-full" src="/public/images/chat/Settings.svg" alt=""/>
-      <img class="cursor-pointer rounded-full" src="/public/images/chat/Slider_03.svg" alt=""/>
+      <ChatHeaderSettings/>
+
+      <ChatHeaderFilter/>
     </div>
   </div>
 </template>

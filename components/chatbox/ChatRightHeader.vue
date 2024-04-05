@@ -3,12 +3,12 @@
     <div class="flex justify-between">
       <div class="flex gap-x-3">
         <div class="w-9 h-9 rounded-full">
-          <img draggable="false" class="w-9 h-9 object-cover rounded-full" src="/public/images/blog/blog-comment-1.svg" alt="blog-commenter-image"/>
+          <img draggable="false" class="w-9 h-9 object-cover rounded-full" src="/public/Icons/chat/pro-user.svg" alt="blog-commenter-image"/>
         </div>
 
         <div class="flex gap-x-2">
           <div>
-            <h6 class="text-lg cursor-pointer">Roman Reigns</h6>
+            <h6 class="text-lg cursor-pointer">Criag Martha</h6>
             <p class="text-sm font-normal text-gray-400 -mt-1">online</p>
           </div>
 
@@ -23,7 +23,7 @@
         </div>
       </div>
 
-      <img src="/public/Icons/chat-option.svg" alt="chat-options"/>
+      <ChatActions/>
     </div>
   </div>
 </template>
