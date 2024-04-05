@@ -51,7 +51,7 @@
       </div>
 
       <!-- voice upload -->
-      <img @click="uploadFile" draggable="false" src="/public/Icons/chat/ic_round-mic.svg" alt="file-upload" />
+      <img class="cursor-pointer" draggable="false" src="/public/Icons/chat/ic_round-mic.svg" alt="file-upload" />
 
       <!-- emojis -->
       <ChatEmoji @getEmoji="getEmoji"/>
