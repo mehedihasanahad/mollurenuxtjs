@@ -19,6 +19,6 @@
     </div>
 
     <!-- Chat options -->
-    <ChatMessageActions/>
+    <ChatMessageActions class="w-full"/>
   </div>
 </template>

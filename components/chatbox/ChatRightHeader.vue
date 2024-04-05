@@ -12,7 +12,7 @@
             <p class="text-sm font-normal text-gray-400 -mt-1">online</p>
           </div>
 
-          <div class="flex items-center mt-1 px-2 py-0.5 bg-[#F4F4F4] rounded-md gap-x-1 text-gray-500 text-sm h-[fit-content]">
+          <div class="hidden sm:flex items-center mt-1 px-2 py-0.5 bg-[#F4F4F4] rounded-md gap-x-1 text-gray-500 text-sm h-[fit-content]">
             <p>133</p>
             <span class="w-1 h-1 bg-gray-300 rounded-full"></span>
             <p>Confirmed</p>

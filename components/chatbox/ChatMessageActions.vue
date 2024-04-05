@@ -1,7 +1,7 @@
 <template>
   <div>
     <div class="relative cursor-pointer">
-      <img class="w-[62.98px] object-cover" src="/public/Icons/chat-option.svg" alt="chat-options" @click="messageActions = !messageActions"/>
+      <img class="object-cover" src="/public/Icons/chat-option.svg" alt="chat-options" @click="messageActions = !messageActions"/>
       <div v-click-outside="closeMessageActions"
            v-if="messageActions"
            class="min-h-28 absolute top-[30px] -left-[1.5rem] sm:-left-[32px] md:-left-[72px] z-20 mt-3 -translate-x-1/2 rounded-lg bg-white shadow-lg text-[0.875rem] border border-gray-200">
