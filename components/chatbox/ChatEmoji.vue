@@ -9,12 +9,14 @@
 <!--        :height="height"-->
 <!--        @handle="selectedEmoji"-->
 <!--    />-->
-    <EmojiPicker
-        v-if="open"
-        class="absolute -top-[330px] -left-[130px]"
-        :native="true"
-        @select="selectedEmoji"
-    />
+    <ClientOnly>
+      <EmojiPicker
+          v-if="open"
+          class="absolute -top-[330px] -left-[130px]"
+          :native="true"
+          @select="selectedEmoji"
+      />
+    </ClientOnly>
   </div>
 </template>
 
