@@ -9,10 +9,17 @@
 <!--        :height="height"-->
 <!--        @handle="selectedEmoji"-->
 <!--    />-->
+    <EmojiPicker
+        v-if="open"
+        class="absolute -top-[330px] -left-[130px]"
+        :native="true"
+        @select="selectedEmoji"
+    />
   </div>
 </template>
 
 <script setup>
+import EmojiPicker from '/plugins/emoji.client.js';
 
 const emit = defineEmits(['getEmoji'])
 
@@ -20,8 +27,8 @@ const open = ref(false);
 const width = ref("300px");
 const height = "250px";
 
-function selectedEmoji(args) {
+function selectedEmoji(emoji) {
   open.value = false;
-  emit('getEmoji', args);
+  emit('getEmoji', emoji);
 }
 </script>

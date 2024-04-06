@@ -76,7 +76,7 @@ const message = ref('');
 const fileUploadMod = ref(false);
 
 function getEmoji(payload) {
-  message.value += payload.emoji;
+  message.value += payload.i;
 }
 
 function uploadFile(event) {
