@@ -12,12 +12,12 @@
 
         <!-- location selection -->
         <div class="mt-10 grid grid-cols-1 md:grid-cols-2 gap-4 md:px-4 xl:px-10 2xl:px-28">
-          <button @click="setLocation('fixed')" class="flex gap-x-3 py-2 border border-2 border-gray-300 justify-center rounded-md hover:border-customGreen" :class="{'border-[#66c68f]': (location === 'fixed')}">
+          <button @click="setLocation('fixed')" class="flex gap-x-3 py-2 border border-2 border-gray-300 justify-center rounded-md hover:border-customGreen" :class="{'!border-[#66c68f]': (location === 'fixed')}">
             <img src="/public/images/home/fixed-location.svg" alt=""/>
             <p>Fixed Location</p>
           </button>
 
-          <button @click="setLocation('desired')" class="flex gap-x-3 py-2 border border-2 border-gray-300 justify-center rounded-md hover:border-customGreen" :class="{'border-[#66c68f]': (location === 'desired')}">
+          <button @click="setLocation('desired')" class="flex gap-x-3 py-2 border border-2 border-gray-300 justify-center rounded-md hover:border-customGreen" :class="{'!border-[#66c68f]': (location === 'desired')}">
             <img src="/public/images/home/desired-location.svg" alt=""/>
             <p>Desired Location</p>
           </button>
