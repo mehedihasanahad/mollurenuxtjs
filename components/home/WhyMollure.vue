@@ -12,7 +12,7 @@
     </div>
 
     <!-- why mollure points -->
-    <div class="mt-2 flex flex-wrap justify-center gap-4">
+    <div class="mt-2 flex flex-wrap justify-center gap-4 bg-white">
       <!-- 1 -->
       <div class="w-full sm:w-[267px] min-h-[350px] border border-1 border-gray-200 hover:shadow-lg flex flex-col items-center gap-5 py-6 px-4 cursor-pointer rounded-xl">
         <div>

@@ -55,7 +55,7 @@
 
         <!-- search button -->
         <div class="mt-10 flex justify-center">
-          <button class="py-2 px-20 bg-[#1960EC] rounded-3xl text-white text-lg">
+          <button class="py-2 px-10 md:px-16 lg:px-20 bg-[#1960EC] rounded-3xl text-white text-lg">
             Search Mollure
           </button>
         </div>

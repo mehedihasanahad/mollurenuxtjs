@@ -43,6 +43,10 @@ function setCategory(category) {
   if (categoryList.value.includes('Select Category')) {
     categoryList.value.shift();
   }
-  categoryList.value.push(category)
+
+  if (categoryList.value.includes(category)) {
+    const index = categoryList.value.findIndex((item) => item === category);
+    if (index !== -1) categoryList.value.splice(index, 1);
+  } else categoryList.value.push(category)
 }
 </script>

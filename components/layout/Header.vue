@@ -7,7 +7,7 @@
       </NuxtLink>
 
       <!--right part-->
-      <div class="flex gap-x-2">
+      <div class="hidden md:flex gap-x-2">
         <div v-if="$route.path === '/'" class="flex gap-x-6 mr-6">
           <!-- Mollure -->
           <div class="relative" @click="mollureDropdown = !mollureDropdown">

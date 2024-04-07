@@ -15,10 +15,7 @@
     </div>
 
     <!-- why mollure -->
-    <WhyMollure class="px-3 md:px-20 xl:px-28"/>
-
-    <div class="h-96"></div>
-    <div class="h-96"></div>
+    <WhyMollure class="px-3 pb-10 md:px-20 xl:px-28"/>
   </div>
 </template>
 
