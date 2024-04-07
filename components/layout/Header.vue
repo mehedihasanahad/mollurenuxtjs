@@ -8,20 +8,53 @@
 
       <!--right part-->
       <div class="flex gap-x-2">
-        <div class="relative" @click="landDropdown = !landDropdown">
+        <div class="flex gap-x-6 mr-6">
+          <!-- Mollure -->
+          <div class="relative" @click="mollureDropdown = !mollureDropdown">
+            <div class="flex pl-4 pr-2 py-1 cursor-pointer select-none">
+              <button type="button">
+                Mollure
+              </button>
+              <img class="pl-1" src="public/Icons/Icons_second part copy/SVGs/Arrow/Chevron_Down.svg" alt="arrow">
+            </div>
+            <div v-click-outside="closeMollureDropDown" v-if="mollureDropdown" class="absolute z-10 max-h-56 bg-white rounded-md border border-gray-100 shadow-xl mb-11">
+              <ul>
+                <li class="cursor-pointer px-3 py-1 hover:bg-green-50 whitespace-nowrap">
+                  <NuxtLink to="/#whyMollure">Why mollure?</NuxtLink>
+                </li>
+                <li class="cursor-pointer px-3 py-1 hover:bg-green-50">
+                  <NuxtLink class="block" to="/about-us">
+                    About us
+                  </NuxtLink>
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- -->
+          <button>
+            <NuxtLink class="block" to="/blogs">
+              Blog
+            </NuxtLink>
+          </button>
+        </div>
+
+        <!-- lang selection -->
+        <div class="relative" @click="langDropdown = !langDropdown">
           <div class="flex border rounded-3xl pl-4 pr-2 py-1 cursor-pointer border-gray-300 select-none">
             <button type="button">
               {{ lang }}
             </button>
             <img class="pl-1" src="public/Icons/Icons_second part copy/SVGs/Arrow/Chevron_Down.svg" alt="arrow">
           </div>
-          <div v-click-outside="closeDropDown" v-if="landDropdown" class="absolute z-10 max-h-56 w-full bg-white rounded-md border border-gray-100 shadow-xl mb-11">
+          <div v-click-outside="closeDropDown" v-if="langDropdown" class="absolute z-10 max-h-56 w-full bg-white rounded-md border border-gray-100 shadow-xl mb-11">
             <ul>
               <li @click="setLang(lang)" class="cursor-pointer px-3 py-1 hover:bg-green-50" v-for="(lang, index) in langs" :key="index">{{lang}}</li>
             </ul>
           </div>
         </div>
 
+        <!-- login/ profile -->
         <client-only>
           <NuxtLink v-if="!globalStore.userInfo" to="/login" class="rounded-3xl px-4 pt-1 bg-customGreen text-white">
             Login
@@ -47,7 +80,7 @@
 import langData from '../../lang.json';
 const lang = ref('EN');
 const langs = ref([]);
-const landDropdown = ref(false);
+const langDropdown = ref(false);
 const profileDropdown = ref(false);
 
 // store currentLang file globally
@@ -69,16 +102,24 @@ function removeCurrentSelected() {
 }
 
 function closeDropDown(event) {
-  if (event.target) landDropdown.value = false;
+  if (event.target) langDropdown.value = false;
 }
 function closeProfileDropDown(event) {
   if (event.target) profileDropdown.value = false;
 }
 
+// logout functionality
 function logout() {
   globalStore.userInfo = null;
   navigateTo('/login');
 }
+
+// mollure menu dropdown
+const mollureDropdown = ref(false);
+function closeMollureDropDown(event) {
+  if (event.target) mollureDropdown.value = false;
+}
+
 
 onMounted(() => {
   removeCurrentSelected();

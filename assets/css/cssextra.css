@@ -15,6 +15,10 @@
     -webkit-font-smoothing: antialiased !important;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 .base-gradient {
     background-image: linear-gradient(to left, #21B8BF , #66C68F);
 }

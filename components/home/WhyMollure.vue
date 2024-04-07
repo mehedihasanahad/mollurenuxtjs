@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div id="whyMollure">
     <h1 class="capitalize text-3xl text-center">Why Mollure</h1>
 
     <!-- molure log -->
