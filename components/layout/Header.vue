@@ -8,7 +8,7 @@
 
       <!--right part-->
       <div class="flex gap-x-2">
-        <div class="flex gap-x-6 mr-6">
+        <div v-if="$route.path === '/'" class="flex gap-x-6 mr-6">
           <!-- Mollure -->
           <div class="relative" @click="mollureDropdown = !mollureDropdown">
             <div class="flex pl-4 pr-2 py-1 cursor-pointer select-none">
