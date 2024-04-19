@@ -19,7 +19,7 @@
         <div>
           <div class="mt-3 px-3">
             <div v-for="(n, index) in 5" :key="n" class="flex justify-between items-center py-2.5 border-b border-b-2 border-b-gray-100">
-              <label class="text-sm font-normal text-gray-600 cursor-pointer" :for="`Category_${index+1}`">
+              <label class="text-sm font-normal text-gray-900 cursor-pointer" :for="`Category_${index+1}`">
                 Category {{index + 1}}
               </label>
               <input @change="setCategory(`category-${index + 1}`)" type="checkbox" :id="`Category_${index+1}`" name="acceptTerms" class="w-4 h-4 border-2 rounded-sm appearance-none cursor-pointer">

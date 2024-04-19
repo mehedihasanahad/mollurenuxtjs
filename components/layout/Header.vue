@@ -17,12 +17,13 @@
               </button>
               <img class="pl-1" src="public/Icons/Icons_second part copy/SVGs/Arrow/Chevron_Down.svg" alt="arrow">
             </div>
-            <div v-click-outside="closeMollureDropDown" v-if="mollureDropdown" class="absolute z-10 max-h-56 bg-white rounded-md border border-gray-100 shadow-xl mb-11">
-              <ul>
-                <li class="cursor-pointer px-3 py-1 hover:bg-green-50 whitespace-nowrap">
-                  <NuxtLink to="/#whyMollure">Why mollure?</NuxtLink>
+            <div v-click-outside="closeMollureDropDown" v-if="mollureDropdown" class="absolute top-10 z-10 max-h-56 bg-white rounded-lg border border-gray-100 shadow-xl mb-11">
+              <span class="absolute -top-[9px] right-[20px] -z-10 h-4 w-4 -translate-x-1/2 rotate-45 bg-white border-l border-t"></span>
+              <ul class="text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
+                <li class="px-3 text-gray-900 rounded-t-md cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
+                  <NuxtLink to="/#whyMollure" class="whitespace-nowrap">Why mollure?</NuxtLink>
                 </li>
-                <li class="cursor-pointer px-3 py-1 hover:bg-green-50">
+                <li class="px-3 text-gray-900 rounded-b-md cursor-default select-none relative text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
                   <NuxtLink class="block" to="/about-us">
                     About us
                   </NuxtLink>
