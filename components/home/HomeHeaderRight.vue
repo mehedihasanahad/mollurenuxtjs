@@ -37,7 +37,7 @@
             <div v-click-outside="closeMunicipalityDropDown" v-if="municipalityDropdown" class="absolute z-10 overflow-auto max-h-56 w-full px-3 bg-white rounded-md selectDropdown shadow-lg mb-11 custom-scrollbar">
               <div v-if="municipalities">
                 <ul class="py-1  text-sm rounded-md  max-h-56 focus:outline-none sm:text-sm">
-                  <li @click="setMunicipality(municipality)" v-for="(municipality, index) in municipalities" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
+                  <li @click="setMunicipality(municipality)" v-for="(municipality, index) in municipalities" :key="index" class="text-gray-900 cursor-default select-none relative border-b-2 border-b-gray-100 text-sm font-normal py-2 hover:bg-green-50 cursor-pointer">
                     {{municipality}}
                   </li>
                 </ul>

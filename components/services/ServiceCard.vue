@@ -14,7 +14,13 @@
         <div class="mt-2">
           <client-only>
             <div class="flex justify-center">
-              <StarRating v-model:rating="rating" :read-only="true" :show-rating="false" :star-size="20" active-color="#FEC923"/>
+              <StarRating
+                  v-model:rating="rating"
+                  :read-only="true"
+                  :show-rating="false"
+                  :star-size="20"
+                  active-color="#FEC923"
+              />
             </div>
           </client-only>
         </div>
