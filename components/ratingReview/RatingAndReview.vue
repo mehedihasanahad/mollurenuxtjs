@@ -12,6 +12,8 @@
       </div>
     </div>
 
-    <div class="lg:col-span-1 xl:col-span-3">cc</div>
+    <div class="lg:col-span-1 xl:col-span-3">
+      <RatingMessages/>
+    </div>
   </div>
 </template>

@@ -12,7 +12,7 @@
 
         <!-- tm filter -->
         <div class="absolute top-12 z-20 mt-3 w-full md:px-1.5">
-          <div v-click-outside="closeTm"
+          <div
                v-if="tm"
                class="w-full min-h-28 rounded-lg bg-white shadow-lg text-[0.875rem] border border-gray-200">
 
@@ -103,7 +103,7 @@
 
 
 <script setup>
-const tm = ref(false);
+const tm = ref(true);
 
 function closeTm() {
   tm.value = false;
